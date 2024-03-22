@@ -1,7 +1,13 @@
 let currentPage = 1;
 let totalPages = 0;
 let articleData = '';
-let articles = ['cover-page', 'article1']; // Ajoutez plus d'articles à cette liste si nécessaire
+let articles =
+    ['journal-page',
+    'vie-etudiante', 'bde', 'av-vie-etu',
+    'etudier-a-iut', 'erasmus', 'sae', 'profs',
+    'pk-nous-choisir', 'apres-but',
+    'credits'];
+
 let currentArticleIndex = 0;
 
 function getArticle(article) {
@@ -68,7 +74,7 @@ document.getElementById('prev').addEventListener('click', previousPage);
 document.querySelectorAll('.menu').forEach((menu) => {
     menu.addEventListener('mouseover', function() {
         const parentBtn = this.querySelector('.unwrap-menu');
-        const lastBtn = this.querySelector('.under-dir').children[this.children.length - 1].firstChild;
+        const lastBtn = this.querySelector('.under-dir').children[this.querySelector('.under-dir').children.length - 1].firstChild;
         const underdir = this.querySelector('.under-dir');
         underdir.style.width = parentBtn.offsetWidth + 'px';
         lastBtn.style.borderRadius = '0 0 15px 15px';
@@ -77,7 +83,7 @@ document.querySelectorAll('.menu').forEach((menu) => {
 
     menu.addEventListener('mouseout', function() {
         const parentBtn = this.querySelector('.unwrap-menu');
-        const lastBtn = this.querySelector('.under-dir').children[this.children.length - 1].firstChild;
+        const lastBtn = this.querySelector('.under-dir').children[this.querySelector('.under-dir').children.length - 1].firstChild;
         lastBtn.style.borderRadius = '';
         parentBtn.style.borderRadius = '';
     });
