@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     background-color: #444444;
@@ -18,15 +24,40 @@ nav {
     padding-bottom: .7em;
     padding-left: 2em;
     width: 100dvw;
+    height: 10dvh;
+    gap: 2rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 #articles {
     display: flex;
     gap: 2em;
-    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
 }
 
 #articles > li {
     list-style-type: none;
+}
+
+.btn {
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: #fefebe;
+    text-decoration: none;
+    color: black;
+}
+
+.pastel-blue {
+    background-color: #baf8f0;
+}
+
+.pastel-yellow {
+    background-color: #ffe799;
+}
+
+.pastel-orange {
+    background-color: #ffb582;
 }
