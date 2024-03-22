@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <title>Journal IUT</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="../script/page.js" defer></script>
 </head>
 <body>
 
 <header>
-    <nav>
+
         <a href="https://iut.univ-amu.fr/fr">
             <img id="logo-iut" src="../res/img/amu-white@2x.png" alt="Logo IUT">
         </a>
-        <ul id="articles">
-            <li id="article-1"><a class="btn pastel-blue" href="#">Article 1</a></li>
-            <li id="article-2"><a class="btn pastel-yellow" href="#">Article 2</a></li>
-            <li id="article-3"><a class="btn pastel-orange" href="#">Article 3</a></li>
+    <nav class="header-nav">
+        <ul id="tabs" class="tabs">
+            <li><button class="btn pastel-1 unwrap-menu" id="cover-page">Informations</button>
+                <ul class="under-dir">
+                    <li><button class="btn pastel-1">test</button></li>
+                    <li><button class="btn pastel-1">encore</button></li>
+                </ul>
+            </li>
+            <li><button class="btn pastel-2" id="article1">Vie Étudiante</button></li>
+            <li><button class="btn pastel-3" id="#">Étudier à l'IUT</button></li>
+            <li><button class="btn pastel-4" id="#">Pourquoi nous rejoindre</button></li>
         </ul>
     </nav>
 </header>
 
 <main>
+    <div class="arrow">
+        <button id="prev">Précédent</button>
+    </div>
+
+    <div id="container">
+
+    </div>
+    <div class="arrow">
+        <button id="next">Suivant</button>
+    </div>
 </main>
 
 </body>
