@@ -2,7 +2,7 @@
 
 ## Descriptif du projet
 
-
+[Lien du site](https://deoxysthegod.github.io/Journal-Interne-IUT/)
 
 ## Documentation Dev
 
