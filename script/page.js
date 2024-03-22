@@ -11,7 +11,7 @@ let articles =
 let currentArticleIndex = 0;
 
 function getArticle(article) {
-    fetch(`pages/${article}.html`)
+    fetch(`/pages/${article}.html`)
         .then(response => response.text())
         .then(data => {
             const parser = new DOMParser();
