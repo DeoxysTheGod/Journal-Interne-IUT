@@ -9,11 +9,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #444444;
-    height: 100vh;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     color: antiquewhite;
+    overflow: hidden;
 }
 
 .tabs {
@@ -22,11 +23,14 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 2rem;
 }
 
 .tabs > li {
     list-style-type: none;
+}
+
+.tabs .btn {
+    /*width: 200px;*/
 }
 
 .btn {
@@ -77,6 +81,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 2rem;
     width: 100%;
     height: 100%;
 }
@@ -92,12 +97,10 @@ section {
     flex-direction: column;
     align-items: center;
     /*justify-content: center;*/
-    margin-top: 2em;
-    margin-bottom: 2em;
     padding: 2em;
     width: 700px;
     color: black;
-    background-color: #fefebe;
+    background-color: #fefefe;
     border-radius: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -110,25 +113,20 @@ article {
     padding: 2em;
     width: 100%;
     color: black;
-    background-color: #fefebe;
 }
 
 .arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin: 0 1rem;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    border: none;
 }
 
-#prev {
-    position: absolute;
-    left: 0;
-    margin: 2rem;
-}
-
-#next {
-    position: absolute;
-    right: 0;
-    margin: 2rem;
+.arrow:hover {
+    background-color: #5d5d5d;
+    opacity: 0.5;
 }
 
 /* Nav bar */
@@ -140,7 +138,7 @@ header {
     padding-bottom: .7em;
     padding-left: 2em;
     width: 100dvw;
-    height: 10dvh;
+    height: 70px;
     gap: 2rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -157,14 +155,13 @@ header {
 }
 
 .header-nav ul li {
-    width: 10vw;
     text-align: center;
 }
 
 .under-dir {
     display: none;
     position: absolute;
-    width: 100%;
+    width: fit-content;
     z-index: 1000;
     list-style: none;
 }
@@ -176,11 +173,15 @@ header {
 
 .under-dir button {
     border-bottom: none;
-    width: 71%;
+    width: 100%;
     border-radius: 0;
 }
 
 .unwrap-menu > button::after {
     font-size: 1.25vw;
     z-index: 1000;
+}
+
+.menu {
+    width: fit-content;
 }

@@ -65,4 +65,22 @@ buttons.forEach(button => {
 document.getElementById('next').addEventListener('click', nextPage);
 document.getElementById('prev').addEventListener('click', previousPage);
 
+document.querySelectorAll('.menu').forEach((menu) => {
+    menu.addEventListener('mouseover', function() {
+        const parentBtn = this.querySelector('.unwrap-menu');
+        const lastBtn = this.querySelector('.under-dir').children[this.children.length - 1].firstChild;
+        const underdir = this.querySelector('.under-dir');
+        underdir.style.width = parentBtn.offsetWidth + 'px';
+        lastBtn.style.borderRadius = '0 0 15px 15px';
+        parentBtn.style.borderRadius = '15px 15px 0 0';
+    });
+
+    menu.addEventListener('mouseout', function() {
+        const parentBtn = this.querySelector('.unwrap-menu');
+        const lastBtn = this.querySelector('.under-dir').children[this.children.length - 1].firstChild;
+        lastBtn.style.borderRadius = '';
+        parentBtn.style.borderRadius = '';
+    });
+});
+
 displayArticle(articles[currentArticleIndex]);
