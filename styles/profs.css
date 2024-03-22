@@ -1,0 +1,21 @@
+.card {
+    height: 500px;
+    width: auto;
+    margin: 2rem 0;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    height: fit-content;
+}
+.clear-section {
+    background-color: transparent;
+    box-shadow: none;
+}
