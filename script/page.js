@@ -32,7 +32,7 @@ function prepareArticle() {
 
 function displayArticle(article) {
     getArticle(article);
-    setTimeout(prepareArticle, 50);
+    setTimeout(prepareArticle, 200);
 }
 
 function nextPage() {
