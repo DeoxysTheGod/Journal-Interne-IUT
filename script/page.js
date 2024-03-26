@@ -3,10 +3,10 @@ let totalPages = 0;
 let articleData = '';
 let articles =
     ['journal-page',
-    'vie-etudiante', 'bde', 'av-vie-etu',
-    'etudier-a-iut', 'erasmus', 'sae', 'profs',
-    'pk-nous-choisir', 'apres-but',
-    'credits'];
+        'vie-etudiante', 'bde', 'av-vie-etu',
+        'etudier-a-iut', 'erasmus', 'sae', 'profs',
+        'pk-nous-choisir', 'apres-but',
+        'credits'];
 
 let currentArticleIndex = 0;
 
@@ -32,7 +32,10 @@ function prepareArticle() {
 
 function displayArticle(article) {
     getArticle(article);
-    setTimeout(prepareArticle, 50);
+    setTimeout(() => {
+        prepareArticle();
+        setupCarousel();
+    }, 200);
 }
 
 function nextPage() {
@@ -56,11 +59,12 @@ function previousPage() {
         displayArticle(articles[currentArticleIndex]);
     }
 }
+
 const tabs = document.getElementById('tabs');
 const buttons = tabs.querySelectorAll('button');
 
 buttons.forEach(button => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
         e.preventDefault();
         currentArticleIndex = articles.indexOf(this.getAttribute('id'));
         currentPage = 1;
@@ -72,7 +76,7 @@ document.getElementById('next').addEventListener('click', nextPage);
 document.getElementById('prev').addEventListener('click', previousPage);
 
 document.querySelectorAll('.menu').forEach((menu) => {
-    menu.addEventListener('mouseover', function() {
+    menu.addEventListener('mouseover', function () {
         const parentBtn = this.querySelector('.unwrap-menu');
         const lastBtn = this.querySelector('.under-dir').children[this.querySelector('.under-dir').children.length - 1].firstChild;
         const underdir = this.querySelector('.under-dir');
@@ -81,7 +85,7 @@ document.querySelectorAll('.menu').forEach((menu) => {
         parentBtn.style.borderRadius = '15px 15px 0 0';
     });
 
-    menu.addEventListener('mouseout', function() {
+    menu.addEventListener('mouseout', function () {
         const parentBtn = this.querySelector('.unwrap-menu');
         const lastBtn = this.querySelector('.under-dir').children[this.querySelector('.under-dir').children.length - 1].firstChild;
         lastBtn.style.borderRadius = '';
@@ -90,3 +94,33 @@ document.querySelectorAll('.menu').forEach((menu) => {
 });
 
 displayArticle(articles[currentArticleIndex]);
+
+
+let index = 0;
+
+function showImage(n) {
+    const images = document.querySelectorAll('.carousel div');
+    images.forEach((img, i) => {
+        img.style.display = (i === n) ? 'block' : 'none';
+    });
+}
+
+function nextImage() {
+    const images = document.querySelectorAll('.carousel div');
+    index = (index + 1) % images.length;
+    showImage(index);
+}
+
+function prevImage() {
+    const images = document.querySelectorAll('.carousel div');
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+}
+
+function setupCarousel() {
+    if (articles[currentArticleIndex] === 'bde') {
+        showImage(index);
+        document.getElementById('next-car').addEventListener('click', nextImage);
+        document.getElementById('prev-car').addEventListener('click', prevImage);
+    }
+}
