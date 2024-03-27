@@ -5,7 +5,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     background-color: #444444;
@@ -121,7 +121,7 @@ section {
     align-items: center;
     /*justify-content: center;*/
     padding: 2rem;
-    width: 868px;
+    width: 800px;
     height: 75dvh;
     color: black;
     background-color: #fefefe;
@@ -133,7 +133,7 @@ section {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    width: 1800px;
+    width: 1600px;
     color: black;
 }
 
