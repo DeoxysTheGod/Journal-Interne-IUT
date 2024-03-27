@@ -1,0 +1,56 @@
+.imaged-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imaged-text img {
+    margin: 0 2rem;
+}
+
+.bde-btn {
+    background-color: #1e6b91;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.bde-btn:hover {
+    background-color: #195a7c;
+}
+
+.pdf-img {
+    width: auto;
+    height: 600px;
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel div {
+    display: none;
+}
+
+.carousel div.active {
+    display: block;
+}
+
+.carousel-btn {
+    width: 50px;
+
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: row;
+}
