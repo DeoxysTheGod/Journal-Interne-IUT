@@ -5,7 +5,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     background-color: #444444;
@@ -121,7 +121,7 @@ section {
     align-items: center;
     /*justify-content: center;*/
     padding: 2rem;
-    width: 868px;
+    width: 800px;
     height: 75dvh;
     color: black;
     background-color: #fefefe;
@@ -133,7 +133,7 @@ section {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    width: 1800px;
+    width: 1600px;
     color: black;
 }
 
@@ -221,4 +221,36 @@ header {
 
 .menu {
     width: fit-content;
+}
+
+#map {
+    height: 400px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}
+
+.tabl {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+
+    border: 1px dashed black; /* Ajoute une bordure verte */
+    padding: 10px; /* Ajoute un espace à l'intérieur du rectangle */
+    border-radius: 10px; /* Arrondit les coins du rectangle */
+
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#tableau {
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.fiche-card {
+    height: 700px;
 }
