@@ -7,7 +7,7 @@ let articles =
         'etudier-a-iut', 'erasmus', 'sae', 'profs',
         'pk-nous-choisir', 'apres-but'];
 
-let currentArticleIndex = 9;
+let currentArticleIndex = 0;
 
 function getArticle(article) {
     fetch(`pages/${article}.html`)
