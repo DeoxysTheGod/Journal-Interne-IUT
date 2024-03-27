@@ -8,7 +8,7 @@ let articles =
         'pk-nous-choisir', 'apres-but',
         'credits'];
 
-let currentArticleIndex = 5;
+let currentArticleIndex = 0;
 
 function getArticle(article) {
     fetch(`pages/${article}.html`)
