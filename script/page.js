@@ -5,10 +5,9 @@ let articles =
     ['journal-page',
         'vie-etudiante', 'bde', 'av-vie-etu',
         'etudier-a-iut', 'erasmus', 'sae', 'profs',
-        'pk-nous-choisir', 'apres-but',
-        'credits'];
+        'pk-nous-choisir', 'apres-but'];
 
-let currentArticleIndex = 0;
+let currentArticleIndex = 9;
 
 function getArticle(article) {
     fetch(`pages/${article}.html`)

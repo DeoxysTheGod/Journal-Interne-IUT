@@ -250,3 +250,7 @@ header {
     grid-template-columns: 1fr 1fr;
     width: 100%;
 }
+
+.fiche-card {
+    height: 700px;
+}
