@@ -36,6 +36,7 @@ function displayArticle(article) {
         prepareArticle();
         setupCarousel();
     }, 200);
+
 }
 
 function nextPage() {
